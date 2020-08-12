@@ -19,9 +19,9 @@ package me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data;
 
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.model.MapClient;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonLayer;
-import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonLineStringStyle;
-import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonPointStyle;
-import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonPolygonStyle;
+import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonLineString;
+import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonPoint;
+import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonPolygon;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonRenderer;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.kml.KmlContainer;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.kml.KmlGroundOverlay;
@@ -224,7 +224,7 @@ public abstract class Layer {
      *
      * @return default style used to render GeoJsonPoints
      */
-    public GeoJsonPointStyle getDefaultPointStyle() {
+    public GeoJsonPoint.Style getDefaultPointStyle() {
         return mRenderer.getDefaultPointStyle();
     }
 
@@ -234,7 +234,7 @@ public abstract class Layer {
      *
      * @return default style used to render GeoJsonLineStrings
      */
-    public GeoJsonLineStringStyle getDefaultLineStringStyle() {
+    public GeoJsonLineString.Style getDefaultLineStringStyle() {
         return mRenderer.getDefaultLineStringStyle();
     }
 
@@ -244,7 +244,7 @@ public abstract class Layer {
      *
      * @return default style used to render GeoJsonPolygons
      */
-    public GeoJsonPolygonStyle getDefaultPolygonStyle() {
+    public GeoJsonPolygon.Style getDefaultPolygonStyle() {
         return mRenderer.getDefaultPolygonStyle();
     }
 }

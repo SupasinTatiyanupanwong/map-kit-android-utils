@@ -39,11 +39,11 @@ public class GeoJsonFeature extends Feature implements Observer {
 
     private final LatLngBounds mBoundingBox;
 
-    private GeoJsonPointStyle mPointStyle;
+    private GeoJsonPoint.Style mPointStyle;
 
-    private GeoJsonLineStringStyle mLineStringStyle;
+    private GeoJsonLineString.Style mLineStringStyle;
 
-    private GeoJsonPolygonStyle mPolygonStyle;
+    private GeoJsonPolygon.Style mPolygonStyle;
 
     /**
      * Creates a new GeoJsonFeature object
@@ -87,7 +87,7 @@ public class GeoJsonFeature extends Feature implements Observer {
      *
      * @return style used to render GeoJsonPoints
      */
-    public GeoJsonPointStyle getPointStyle() {
+    public GeoJsonPoint.Style getPointStyle() {
         return mPointStyle;
     }
 
@@ -96,7 +96,7 @@ public class GeoJsonFeature extends Feature implements Observer {
      *
      * @param pointStyle style used to render GeoJsonPoints
      */
-    public void setPointStyle(GeoJsonPointStyle pointStyle) {
+    public void setPointStyle(GeoJsonPoint.Style pointStyle) {
         if (pointStyle == null) {
             throw new IllegalArgumentException("Point style cannot be null");
         }
@@ -115,7 +115,7 @@ public class GeoJsonFeature extends Feature implements Observer {
      *
      * @return style used to render GeoJsonLineStrings
      */
-    public GeoJsonLineStringStyle getLineStringStyle() {
+    public GeoJsonLineString.Style getLineStringStyle() {
         return mLineStringStyle;
     }
 
@@ -124,7 +124,7 @@ public class GeoJsonFeature extends Feature implements Observer {
      *
      * @param lineStringStyle style used to render GeoJsonLineStrings
      */
-    public void setLineStringStyle(GeoJsonLineStringStyle lineStringStyle) {
+    public void setLineStringStyle(GeoJsonLineString.Style lineStringStyle) {
         if (lineStringStyle == null) {
             throw new IllegalArgumentException("Line string style cannot be null");
         }
@@ -143,7 +143,7 @@ public class GeoJsonFeature extends Feature implements Observer {
      *
      * @return style used to render GeoJsonPolygons
      */
-    public GeoJsonPolygonStyle getPolygonStyle() {
+    public GeoJsonPolygon.Style getPolygonStyle() {
         return mPolygonStyle;
     }
 
@@ -152,7 +152,7 @@ public class GeoJsonFeature extends Feature implements Observer {
      *
      * @param polygonStyle style used to render GeoJsonPolygons
      */
-    public void setPolygonStyle(GeoJsonPolygonStyle polygonStyle) {
+    public void setPolygonStyle(GeoJsonPolygon.Style polygonStyle) {
         if (polygonStyle == null) {
             throw new IllegalArgumentException("Polygon style cannot be null");
         }

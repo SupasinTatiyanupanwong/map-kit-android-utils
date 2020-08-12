@@ -23,14 +23,14 @@ import me.tatiyanupanwong.supasin.android.libraries.kits.maps.MapKit;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.model.Marker;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.model.Polygon;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.model.Polyline;
-import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonLineStringStyle;
-import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonPointStyle;
-import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonPolygonStyle;
+import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonLineString;
+import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonPoint;
+import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonPolygon;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.kml.KmlStyle;
 
 /**
- * An abstraction that shares the common properties of {@link KmlStyle}, {@link GeoJsonPointStyle},
- * {@link GeoJsonLineStringStyle} and {@link GeoJsonPolygonStyle}
+ * An abstraction that shares the common properties of {@link KmlStyle}, {@link GeoJsonPoint.Style},
+ * {@link GeoJsonLineString.Style} and {@link GeoJsonPolygon.Style}
  */
 public abstract class Style extends Observable {
 

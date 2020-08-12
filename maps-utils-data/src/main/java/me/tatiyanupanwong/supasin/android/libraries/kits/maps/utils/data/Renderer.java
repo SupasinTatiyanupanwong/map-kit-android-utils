@@ -52,14 +52,11 @@ import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonFeature;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonGeometryCollection;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonLineString;
-import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonLineStringStyle;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonMultiLineString;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonMultiPoint;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonMultiPolygon;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonPoint;
-import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonPointStyle;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonPolygon;
-import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonPolygonStyle;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.geojson.GeoJsonRenderer;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.kml.KmlContainer;
 import me.tatiyanupanwong.supasin.android.libraries.kits.maps.utils.data.kml.KmlGroundOverlay;
@@ -108,11 +105,11 @@ public class Renderer {
 
     private ArrayList<KmlContainer> mContainers;
 
-    private final GeoJsonPointStyle mDefaultPointStyle;
+    private final GeoJsonPoint.Style mDefaultPointStyle;
 
-    private final GeoJsonLineStringStyle mDefaultLineStringStyle;
+    private final GeoJsonLineString.Style mDefaultLineStringStyle;
 
-    private final GeoJsonPolygonStyle mDefaultPolygonStyle;
+    private final GeoJsonPolygon.Style mDefaultPolygonStyle;
 
     private final MarkerManager.Collection mMarkers;
     private final PolygonManager.Collection mPolygons;
@@ -162,8 +159,8 @@ public class Renderer {
             PolygonManager polygonManager,
             PolylineManager polylineManager,
             GroundOverlayManager groundOverlayManager) {
-        this(map, null, new GeoJsonPointStyle(), new GeoJsonLineStringStyle(),
-                new GeoJsonPolygonStyle(), null, markerManager, polygonManager, polylineManager,
+        this(map, null, new GeoJsonPoint.Style(), new GeoJsonLineString.Style(),
+                new GeoJsonPolygon.Style(), null, markerManager, polygonManager, polylineManager,
                 groundOverlayManager);
         mFeatures.putAll(features);
         mImagesCache = null;
@@ -172,9 +169,9 @@ public class Renderer {
     private Renderer(
             MapClient map,
             Set<String> markerIconUrls,
-            GeoJsonPointStyle defaultPointStyle,
-            GeoJsonLineStringStyle defaultLineStringStyle,
-            GeoJsonPolygonStyle defaultPolygonStyle,
+            GeoJsonPoint.Style defaultPointStyle,
+            GeoJsonLineString.Style defaultLineStringStyle,
+            GeoJsonPolygon.Style defaultPolygonStyle,
             BiMultiMap<Feature> containerFeatures,
             MarkerManager markerManager,
             PolygonManager polygonManager,
@@ -464,7 +461,7 @@ public class Renderer {
      *
      * @return default style used to render GeoJsonPoints
      */
-    GeoJsonPointStyle getDefaultPointStyle() {
+    GeoJsonPoint.Style getDefaultPointStyle() {
         return mDefaultPointStyle;
     }
 
@@ -473,7 +470,7 @@ public class Renderer {
      *
      * @return default style used to render GeoJsonLineStrings
      */
-    GeoJsonLineStringStyle getDefaultLineStringStyle() {
+    GeoJsonLineString.Style getDefaultLineStringStyle() {
         return mDefaultLineStringStyle;
     }
 
@@ -482,7 +479,7 @@ public class Renderer {
      *
      * @return default style used to render GeoJsonPolygons
      */
-    GeoJsonPolygonStyle getDefaultPolygonStyle() {
+    GeoJsonPolygon.Style getDefaultPolygonStyle() {
         return mDefaultPolygonStyle;
     }
 
@@ -1060,7 +1057,7 @@ public class Renderer {
      * @param multiPoint contains an array of GeoJsonPoints
      * @return array of Markers that have been added to the map
      */
-    private ArrayList<Marker> addMultiPointToMap(GeoJsonPointStyle pointStyle,
+    private ArrayList<Marker> addMultiPointToMap(GeoJsonPoint.Style pointStyle,
                                                  GeoJsonMultiPoint multiPoint) {
         ArrayList<Marker> markers = new ArrayList<>();
         for (GeoJsonPoint geoJsonPoint : multiPoint.getPoints()) {
@@ -1077,7 +1074,7 @@ public class Renderer {
      * @param multiLineString contains an array of GeoJsonLineStrings
      * @return array of Polylines that have been added to the map
      */
-    private ArrayList<Polyline> addMultiLineStringToMap(GeoJsonLineStringStyle lineStringStyle,
+    private ArrayList<Polyline> addMultiLineStringToMap(GeoJsonLineString.Style lineStringStyle,
                                                         GeoJsonMultiLineString multiLineString) {
         ArrayList<Polyline> polylines = new ArrayList<>();
         for (GeoJsonLineString geoJsonLineString : multiLineString.getLineStrings()) {
@@ -1094,7 +1091,7 @@ public class Renderer {
      * @param multiPolygon contains an array of GeoJsonPolygons
      * @return array of Polygons that have been added to the map
      */
-    private ArrayList<Polygon> addMultiPolygonToMap(GeoJsonPolygonStyle polygonStyle,
+    private ArrayList<Polygon> addMultiPolygonToMap(GeoJsonPolygon.Style polygonStyle,
                                                     GeoJsonMultiPolygon multiPolygon) {
         ArrayList<Polygon> polygons = new ArrayList<>();
         for (GeoJsonPolygon geoJsonPolygon : multiPolygon.getPolygons()) {

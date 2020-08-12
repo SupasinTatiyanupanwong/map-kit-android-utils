@@ -9,8 +9,32 @@ android {
         minSdkVersion 19
         targetSdkVersion 29
     }
+
+    flavorDimensions 'vendor'
+    productFlavors {
+        google
+        huawei {
+            applicationIdSuffix '.huawei'
+        }
+    }
+}
+
+configurations {
+    google
+    huawei
+
+    googleImplementation.extendsFrom(google)
+    googleCompileOnly.extendsFrom(huawei)
+
+    huaweiImplementation.extendsFrom(huawei)
+    huaweiCompileOnly.extendsFrom(google)
 }
 
 dependencies {
+    google 'me.tatiyanupanwong.supasin.android.libraries.kits.maps:maps-google:1.2.0'
+    huawei 'me.tatiyanupanwong.supasin.android.libraries.kits.maps:maps-huawei:1.2.0'
+
+    implementation project(':maps-utils')
+
     implementation 'androidx.appcompat:appcompat:1.1.0'
 }

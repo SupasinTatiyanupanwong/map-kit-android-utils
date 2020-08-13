@@ -23,26 +23,12 @@ android {
         minSdkVersion 19
         targetSdkVersion 29
     }
+
+    resourcePrefix 'mku_'
 }
 
 dependencies {
-    api project(':maps-utils-base')
-    api project(':maps-utils-clustering')
-    api project(':maps-utils-collections')
-    api project(':maps-utils-data')
-    api project(':maps-utils-geometry')
-    api project(':maps-utils-heatmaps')
-    api project(':maps-utils-projection')
-    api project(':maps-utils-ui')
+    api 'me.tatiyanupanwong.supasin.android.libraries.kits.maps:maps-core:1.2.1'
+
+    api 'androidx.appcompat:appcompat:1.2.0'
 }
-
-ext {
-    POM_ARTIFACT_ID = 'maps-utils'
-
-    POM_NAME = 'Map Kit Utility Library'
-    POM_DESCRIPTION = 'Utilities that are useful for a wide range of applications using the Map Kit.'
-    POM_VERSION = '1.0.0'
-}
-
-apply from: rootProject.file("gradle/install.gradle")
-apply from: rootProject.file("gradle/bintray.gradle")

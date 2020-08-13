@@ -1,5 +1,9 @@
 # Map Kit Utility Library
 
+[![Download](https://api.bintray.com/packages/supasintatiyanupanwong/android.libraries.kits.maps/maps-utils/images/download.svg)](https://bintray.com/supasintatiyanupanwong/android.libraries.kits.maps/maps-utils/_latestVersion)
+[![javadoc](https://javadoc.io/badge2/me.tatiyanupanwong.supasin.android.libraries.kits.maps/maps-utils/javadoc.svg)](https://javadoc.io/doc/me.tatiyanupanwong.supasin.android.libraries.kits.maps/maps-utils)
+[![license](https://img.shields.io/github/license/SupasinTatiyanupanwong/map-kit-android-utils.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
 Utilities that are useful for a wide range of applications using the [Map Kit](https://github.com/SupasinTatiyanupanwong/map-kit-android).
 
 - **Marker clustering** — handles the display of a large number of points
@@ -10,21 +14,17 @@ Utilities that are useful for a wide range of applications using the [Map Kit](h
 - **KML** — displays KML data
 - **GeoJSON** — displays and styles GeoJSON data
 
-Check [wiki](https://github.com/SupasinTatiyanupanwong/map-kit-android-utils/wiki) for documentation.
+See [wiki](https://github.com/SupasinTatiyanupanwong/map-kit-android-utils/wiki) for usage documentation.
 
 ## Installation
 
 Add the following to your Gradle build file:
 
-| Functionalities                        | Gradle dependencies                                                                     |
-|:-------------------------------------- |:--------------------------------------------------------------------------------------- |
-| ALL                                    | ``me.tatiyanupanwong.supasin.android.libraries.kits.maps:maps-utils:1.0.0``             |
-| Poly de/encoding<br>Spherical geometry | ``me.tatiyanupanwong.supasin.android.libraries.kits.maps:maps-utils-base:1.0.0``        |
-| Marker clustering                      | ``me.tatiyanupanwong.supasin.android.libraries.kits.maps:maps-utils-clustering:1.0.0``  |
-| Collections                            | ``me.tatiyanupanwong.supasin.android.libraries.kits.maps:maps-utils-collections:1.0.0`` |
-| KML and GeoJSON                        | ``me.tatiyanupanwong.supasin.android.libraries.kits.maps:maps-utils-data:1.0.0``        |
-| Heatmaps                               | ``me.tatiyanupanwong.supasin.android.libraries.kits.maps:maps-utils-heatmaps:1.0.0``    |
-| IconGenerator                          | ``me.tatiyanupanwong.supasin.android.libraries.kits.maps:maps-utils-ui:1.0.0``          |
+```groovy
+dependencies {
+    implementation 'me.tatiyanupanwong.supasin.android.libraries.kits.maps:maps-utils:1.0.0'
+}  
+```
 
 ## License
 

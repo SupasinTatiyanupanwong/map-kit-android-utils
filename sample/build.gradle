@@ -17,13 +17,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
 
     defaultConfig {
-        applicationId 'me.tatiyanupanwong.supasin.android.samples.kits.maps.utils'
+        applicationId 'dev.supasintatiyanupanwong.samples.android.kits.maps.utils'
 
         minSdkVersion 19
-        targetSdkVersion 29
+        targetSdkVersion 30
     }
 
     flavorDimensions 'vendor'
@@ -47,8 +47,8 @@ configurations {
 }
 
 dependencies {
-    google 'me.tatiyanupanwong.supasin.android.libraries.kits.maps:maps-google:1.2.1'
-    huawei 'me.tatiyanupanwong.supasin.android.libraries.kits.maps:maps-huawei:1.2.1'
+    google 'dev.supasintatiyanupanwong.libraries.android.kits.maps:maps-google:2.0.0'
+    huawei 'dev.supasintatiyanupanwong.libraries.android.kits.maps:maps-huawei:2.0.0'
 
     implementation project(':maps-utils')
 

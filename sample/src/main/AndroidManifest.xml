@@ -18,7 +18,7 @@
 
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="me.tatiyanupanwong.supasin.android.samples.kits.maps.utils">
+    package="dev.supasintatiyanupanwong.samples.android.kits.maps.utils">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

@@ -15,6 +15,16 @@
  */
 
 tasks.withType(Javadoc) {
-    title = POM_NAME + " " + POM_VERSION + " API"
+    title = POM_NAME + " " + VERSION_NAME + " API"
     options.addBooleanOption 'Xdoclint:none', true
 }
+
+ext {
+    POM_ARTIFACT_ID = 'maps-utils'
+    POM_NAME = 'Map Kit Utility Library'
+    POM_DESCRIPTION = 'Utilities that are useful for a wide range of applications using the Map Kit.'
+
+    VERSION_NAME = '1.0.0'
+}
+
+apply plugin: 'com.vanniktech.maven.publish'

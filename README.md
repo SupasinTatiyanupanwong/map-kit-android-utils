@@ -1,7 +1,7 @@
 # Map Kit Utility Library
 
-[![Download](https://api.bintray.com/packages/supasintatiyanupanwong/android.libraries.kits.maps/maps-utils/images/download.svg)](https://bintray.com/supasintatiyanupanwong/android.libraries.kits.maps/maps-utils/_latestVersion)
-[![javadoc](https://javadoc.io/badge2/me.tatiyanupanwong.supasin.android.libraries.kits.maps/maps-utils/javadoc.svg)](https://javadoc.io/doc/me.tatiyanupanwong.supasin.android.libraries.kits.maps/maps-utils)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/dev.supasintatiyanupanwong.libraries.android.kits.maps/maps-utils/badge.svg)](https://search.maven.org/artifact/dev.supasintatiyanupanwong.libraries.android.kits.maps/maps-utils)
+[![javadoc](https://javadoc.io/badge2/dev.supasintatiyanupanwong.libraries.android.kits.maps/maps-utils/javadoc.svg)](https://javadoc.io/doc/dev.supasintatiyanupanwong.libraries.android.kits.maps/maps-utils)
 [![license](https://img.shields.io/github/license/SupasinTatiyanupanwong/map-kit-android-utils.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 Utilities that are useful for a wide range of applications using the [Map Kit](https://github.com/SupasinTatiyanupanwong/map-kit-android).
@@ -16,20 +16,29 @@ Utilities that are useful for a wide range of applications using the [Map Kit](h
 
 See [wiki](https://github.com/SupasinTatiyanupanwong/map-kit-android-utils/wiki) for usage documentation.
 
-## Installation
+## Declaring dependencies
 
-Add the following to your Gradle build file:
+To add a dependency on Map Kit Utility Library, you must add the Maven Central repository to your project.
+
+Add the dependencies for the artifacts you need in the `build.gradle` file for your app or module:
 
 ```groovy
 dependencies {
-    implementation 'me.tatiyanupanwong.supasin.android.libraries.kits.maps:maps-utils:1.0.0'
+    implementation 'dev.supasintatiyanupanwong.libraries.android.kits.maps:maps-utils:1.0.0'
 }  
 ```
+
+For more information about dependencies, see [Add build dependencies](https://developer.android.com/studio/build/dependencies).
+
+## Feedback
+
+Your feedback helps make Map Kit Utility Library. Let us know if you discover new issues or have ideas for improving this library.
+Please take a look at the [existing issues](https://github.com/SupasinTatiyanupanwong/map-kit-android-utils/issues) or the [existing discussions](https://github.com/SupasinTatiyanupanwong/map-kit-android-utils/discussions) in this library before you create a new one.
 
 ## License
 
 ```
-Copyright (C) 2020 Supasin Tatiyanupanwong
+Copyright 2020 Supasin Tatiyanupanwong
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
